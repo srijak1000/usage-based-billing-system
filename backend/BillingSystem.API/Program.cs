@@ -1,6 +1,7 @@
 using BillingSystem.Application;
 using BillingSystem.Domain;
 using BillingSystem.Infrastructure;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
