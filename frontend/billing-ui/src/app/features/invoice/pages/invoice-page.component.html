@@ -1,0 +1,54 @@
+<section class="invoice-shell">
+  <header>
+    <h2>Usage-based billing demo</h2>
+    <p>Seed the sample usage events, then generate an invoice for a user in the selected billing period.</p>
+  </header>
+
+  <div class="controls">
+    <label for="userId">User ID</label>
+    <input id="userId" [(ngModel)]="userId" placeholder="user-1" />
+    <button type="button" (click)="seedDemoData()">Seed demo data</button>
+    <button type="button" (click)="loadInvoice()">Generate invoice</button>
+  </div>
+
+  <div class="status" *ngIf="message">{{ message }}</div>
+
+  <div class="loading" *ngIf="loading">Working...</div>
+
+  <article class="invoice-card" *ngIf="invoice">
+    <div class="invoice-header">
+      <div>
+        <h3>Invoice for {{ invoice.userId }}</h3>
+        <p>{{ invoice.start | date:'mediumDate' }} → {{ invoice.end | date:'mediumDate' }}</p>
+      </div>
+      <div class="amount">${{ invoice.totalAmount | number:'1.2-2' }}</div>
+    </div>
+
+    <h4>Line items</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Service</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of invoice.lineItems">
+          <td>{{ item.resourceId }}</td>
+          <td>{{ item.serviceType }}</td>
+          <td>{{ item.quantity }} {{ item.unit }}</td>
+          <td>${{ item.amount | number:'1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Service subtotals</h4>
+    <ul>
+      <li *ngFor="let subtotal of invoice.serviceSubtotals">
+        {{ subtotal.serviceType }}: ${{ subtotal.amount | number:'1.2-2' }}
+      </li>
+    </ul>
+  </article>
+</section>
