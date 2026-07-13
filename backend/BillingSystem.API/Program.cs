@@ -20,6 +20,10 @@ var pricingRules = builder.Configuration.GetSection("Billing:PricingRules").Get<
 
 builder.Services.AddSingleton(new PricingConfiguration(pricingRules));
 builder.Services.AddSingleton<IUsageStore, InMemoryUsageStore>();
+builder.Services.AddSingleton<IPricingStrategy, FlatPerUnitPricingStrategy>();
+builder.Services.AddSingleton<IPricingStrategy, TieredPricingStrategy>();
+builder.Services.AddSingleton<IPricingStrategy, SubscriptionPricingStrategy>();
+builder.Services.AddSingleton<PricingStrategyRegistry>();
 builder.Services.AddSingleton<BillingService>();
 
 var app = builder.Build();

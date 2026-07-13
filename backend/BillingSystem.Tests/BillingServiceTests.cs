@@ -19,7 +19,13 @@ public class BillingServiceTests
             });
 
         var usageStore = new InMemoryUsageStore();
-        var service = new BillingService(pricingConfig, usageStore);
+        var strategyRegistry = new PricingStrategyRegistry(new IPricingStrategy[]
+        {
+            new FlatPerUnitPricingStrategy(),
+            new TieredPricingStrategy(),
+            new SubscriptionPricingStrategy()
+        });
+        var service = new BillingService(pricingConfig, usageStore, strategyRegistry);
 
         service.RecordUsage(new UsageEvent("user-1", "resource-storage", "storage", 200m, "GB-hour", new DateTime(2026, 6, 1, 12, 0, 0, DateTimeKind.Utc)));
         service.RecordUsage(new UsageEvent("user-1", "resource-compute", "compute", 150m, "hour", new DateTime(2026, 6, 10, 10, 0, 0, DateTimeKind.Utc)));
