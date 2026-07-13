@@ -6,11 +6,13 @@ public sealed class BillingService
 {
     private readonly PricingConfiguration _pricingConfiguration;
     private readonly IUsageStore _usageStore;
+    private readonly PricingStrategyRegistry _strategyRegistry;
 
-    public BillingService(PricingConfiguration pricingConfiguration, IUsageStore usageStore)
+    public BillingService(PricingConfiguration pricingConfiguration, IUsageStore usageStore, PricingStrategyRegistry strategyRegistry)
     {
         _pricingConfiguration = pricingConfiguration;
         _usageStore = usageStore;
+        _strategyRegistry = strategyRegistry;
     }
 
     public void RecordUsage(UsageEvent usageEvent)
@@ -63,58 +65,9 @@ public sealed class BillingService
         };
     }
 
-    private static decimal CalculateAmount(PricingRule rule, decimal quantity)
+    private decimal CalculateAmount(PricingRule rule, decimal quantity)
     {
-        return rule.BillingType switch
-        {
-            BillingType.FlatPerUnit => quantity * rule.BaseAmount,
-            BillingType.Tiered => CalculateTieredAmount(rule, quantity),
-            BillingType.FixedSubscriptionPlusOverage => CalculateSubscriptionAmount(rule, quantity),
-            _ => throw new NotSupportedException($"Unsupported billing type: {rule.BillingType}")
-        };
-    }
-
-    private static decimal CalculateTieredAmount(PricingRule rule, decimal quantity)
-    {
-        if (rule.Tiers.Count == 0)
-        {
-            throw new InvalidOperationException("Tiered pricing requires at least one tier.");
-        }
-
-        var total = 0m;
-        var remaining = quantity;
-        var previousThreshold = 0m;
-
-        foreach (var tier in rule.Tiers)
-        {
-            var bucketSize = Math.Max(0, tier.Threshold - previousThreshold);
-            var applied = Math.Min(remaining, bucketSize);
-            total += applied * tier.Rate;
-            remaining -= applied;
-            previousThreshold = tier.Threshold;
-
-            if (remaining <= 0)
-            {
-                break;
-            }
-        }
-
-        if (remaining > 0)
-        {
-            var finalTier = rule.Tiers[^1];
-            total += remaining * finalTier.Rate;
-        }
-
-        return total;
-    }
-
-    private static decimal CalculateSubscriptionAmount(PricingRule rule, decimal quantity)
-    {
-        if (rule.IncludedQuantity is null || rule.OverageRate is null)
-        {
-            throw new InvalidOperationException("Subscription pricing requires included quantity and overage rate.");
-        }
-
-        return rule.BaseAmount + Math.Max(0, quantity - rule.IncludedQuantity.Value) * rule.OverageRate.Value;
+        var strategy = _strategyRegistry.GetStrategy(rule.BillingType);
+        return strategy.Calculate(rule, quantity);
     }
 }
