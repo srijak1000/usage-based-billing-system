@@ -1,6 +1,7 @@
 using BillingSystem.Application;
 using BillingSystem.Domain;
 using BillingSystem.Infrastructure;
+using Xunit;
 
 namespace BillingSystem.Tests;
 
@@ -13,8 +14,8 @@ public class BillingServiceTests
             new[]
             {
                 new PricingRule("storage", BillingType.FlatPerUnit, "GB-hour", 0.02m),
-                new PricingRule("compute", BillingType.Tiered, "hour", 0.10m, new[] { 100m, 900m, 0.05m }),
-                new PricingRule("api", BillingType.FixedSubscriptionPlusOverage, "call", 50m, 1000000m, 0.001m)
+                new PricingRule("compute", BillingType.Tiered, "hour", 0m, new[] { new TierDefinition(100m, 0.10m), new TierDefinition(1000m, 0.08m), new TierDefinition(decimal.MaxValue, 0.05m) }),
+                new PricingRule("api", BillingType.FixedSubscriptionPlusOverage, "call", 50m, null, 1000000m, 0.001m)
             });
 
         var usageStore = new InMemoryUsageStore();
