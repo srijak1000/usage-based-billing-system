@@ -42,15 +42,12 @@ yarn-error.log*
 .env
 
 # =========================
-
 # .NET / C#
-
 # =========================
 
-# Build results
-
-/bin/
-/obj/
+# Build results (recursive)
+bin/
+obj/
 
 # Visual Studio files
 
