@@ -59,6 +59,20 @@
         "runtime": {
           "bin/placeholder/BillingSystem.Domain.dll": {}
         }
+      },
+      "BillingSystem.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "BillingSystem.Application": "1.0.0",
+          "BillingSystem.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BillingSystem.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BillingSystem.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -108,11 +122,17 @@
       "type": "project",
       "path": "../BillingSystem.Domain/BillingSystem.Domain.csproj",
       "msbuildProject": "../BillingSystem.Domain/BillingSystem.Domain.csproj"
+    },
+    "BillingSystem.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../BillingSystem.Infrastructure/BillingSystem.Infrastructure.csproj",
+      "msbuildProject": "../BillingSystem.Infrastructure/BillingSystem.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "BillingSystem.Application >= 1.0.0",
+      "BillingSystem.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.8"
     ]
   },
@@ -144,6 +164,9 @@
           "projectReferences": {
             "/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/BillingSystem.Application.csproj": {
               "projectPath": "/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/BillingSystem.Application.csproj"
+            },
+            "/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Infrastructure/BillingSystem.Infrastructure.csproj": {
+              "projectPath": "/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Infrastructure/BillingSystem.Infrastructure.csproj"
             }
           }
         }

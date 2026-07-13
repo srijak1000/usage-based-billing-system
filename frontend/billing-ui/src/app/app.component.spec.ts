@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('billing-ui');
   });
 
-  it('should render title', () => {
+  it('should render the app heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, billing-ui');
+    expect(compiled.querySelector('h1')?.textContent).toContain('CredFix Billing Demo');
   });
 });
