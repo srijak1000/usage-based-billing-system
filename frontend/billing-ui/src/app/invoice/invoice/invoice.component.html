@@ -6,13 +6,10 @@
 
 <button (click)="fetchInvoice()">Get Invoice</button>
 
-<!-- Loading -->
 <p *ngIf="loading">Loading...</p>
 
-<!-- Error -->
 <p *ngIf="error" style="color:red">{{ error }}</p>
 
-<!-- Result -->
 <div *ngIf="invoiceData">
   <h3>Total: {{ invoiceData.totalCost }}</h3>
 
