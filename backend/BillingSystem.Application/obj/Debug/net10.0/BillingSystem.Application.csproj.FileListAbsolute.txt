@@ -1,0 +1,16 @@
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/bin/Debug/net10.0/BillingSystem.Application.deps.json
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/bin/Debug/net10.0/BillingSystem.Application.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/bin/Debug/net10.0/BillingSystem.Application.pdb
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/bin/Debug/net10.0/BillingSystem.Domain.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/bin/Debug/net10.0/BillingSystem.Domain.pdb
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.csproj.AssemblyReference.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.AssemblyInfoInputs.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.AssemblyInfo.cs
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.csproj.CoreCompileInputs.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.sourcelink.json
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingS.86DAB677.Up2Date
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/refint/BillingSystem.Application.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/BillingSystem.Application.pdb
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Application/obj/Debug/net10.0/ref/BillingSystem.Application.dll

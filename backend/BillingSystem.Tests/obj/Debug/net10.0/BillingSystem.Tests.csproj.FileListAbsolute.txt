@@ -1,0 +1,8 @@
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/bin/Debug/net10.0/.msCoverageSourceRootsMapping_BillingSystem.Tests
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/bin/Debug/net10.0/CoverletSourceRootsMapping_BillingSystem.Tests
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/obj/Debug/net10.0/BillingSystem.Tests.csproj.AssemblyReference.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/obj/Debug/net10.0/BillingSystem.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/obj/Debug/net10.0/BillingSystem.Tests.AssemblyInfoInputs.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/obj/Debug/net10.0/BillingSystem.Tests.AssemblyInfo.cs
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/obj/Debug/net10.0/BillingSystem.Tests.csproj.CoreCompileInputs.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Tests/obj/Debug/net10.0/BillingSystem.Tests.sourcelink.json

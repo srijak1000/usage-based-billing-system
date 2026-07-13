@@ -1,0 +1,12 @@
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/bin/Debug/net10.0/BillingSystem.Domain.deps.json
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/bin/Debug/net10.0/BillingSystem.Domain.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/bin/Debug/net10.0/BillingSystem.Domain.pdb
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.AssemblyInfoInputs.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.AssemblyInfo.cs
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.csproj.CoreCompileInputs.cache
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.sourcelink.json
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/refint/BillingSystem.Domain.dll
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/BillingSystem.Domain.pdb
+/Users/srijakchakraborty/Desktop/Projects/usage-based-billing-system/backend/BillingSystem.Domain/obj/Debug/net10.0/ref/BillingSystem.Domain.dll
