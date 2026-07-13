@@ -1,0 +1,34 @@
+<h2>Generate Invoice</h2>
+
+<input [(ngModel)]="userId" placeholder="User ID" />
+<input [(ngModel)]="startDate" type="date" />
+<input [(ngModel)]="endDate" type="date" />
+
+<button (click)="fetchInvoice()">Get Invoice</button>
+
+<!-- Loading -->
+<p *ngIf="loading">Loading...</p>
+
+<!-- Error -->
+<p *ngIf="error" style="color:red">{{ error }}</p>
+
+<!-- Result -->
+<div *ngIf="invoiceData">
+  <h3>Total: {{ invoiceData.totalCost }}</h3>
+
+  <table border="1">
+    <tr>
+      <th>Date</th>
+      <th>Units</th>
+      <th>Cost/Unit</th>
+      <th>Total</th>
+    </tr>
+
+    <tr *ngFor="let item of invoiceData.breakdown">
+      <td>{{ item.date }}</td>
+      <td>{{ item.unitsConsumed }}</td>
+      <td>{{ item.costPerUnit }}</td>
+      <td>{{ item.total }}</td>
+    </tr>
+  </table>
+</div>
